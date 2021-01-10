@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Nobels</title>
+
+    <!--    <link href="style.css" rel="stylesheet" type="text/css">-->
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="lay.css">
+
+
+    <script src="import_prizes.js"></script>
+    <script src="import_winners.js"></script>
+    <script src="hide.js"></script>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="wrapper">
+            <h1 onclick="window.location.reload()">Nobel Prize Winners</h1>
+            <div class="header-right">
+
+            </div>
+        </div>
+    </header>
+
+    <div id="hero-image">
+
+    </div>
+
+    <article>
+        <div class="primary-content">
+            <div class="wrapper">
+
+                <select id="startYear">
+                    <option>Select Start Year</option>
+                </select>
+
+                <select id="endYear">
+                    <option>Select End Year</option>
+                </select>
+
+                <select id="selectCat">
+                    <option>Select category</option>
+
+                </select>
+
+                <form>
+                    <input type="button" id="Submit" value="Submit" onclick="displayData(sYear.value,selectEnd.value,Cat.value)">
+                </form>
+
+                <div class="container">
+                    <form>
+                        <input type="radio" id="r1" name="showHide" onclick="hide_row('male')">Male<br>
+                        <input type="radio" id="r2" name="showHide" onclick="hide_row('female')">Female<br>
+                        <input type="radio" id="r2" name="showHide" onclick="hide_row('org')">Org<br>
+                        <input type="radio" id="r3" name="showHide" onclick="hide_row('all')">All
+                    </form>
+                </div>
+
+
+
+                <div id='demo'></div>
+                <div id='demo1'></div>
+                <Table id="My-Table" class="content-table">
+                </Table>
+                <div class="sidepanel">
+                    <div class="sidebar">
+                        <p>To find out more information about each laureate simply click on their name. </p>
+                        <div id='myList'></div>
+                    </div>
+                </div>
+                <script src="dropdown.js"></script>
+                <script src="Table_data.js"></script>
+            </div>
+        </div>
+    </article>
+
+</body></html>
